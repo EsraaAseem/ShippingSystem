@@ -1,0 +1,17 @@
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Service.deps.json
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Service.dll
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Service.pdb
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Model.dll
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Utility.dll
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Model.pdb
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\bin\Debug\net7.0\ShippingSystem.Utility.pdb
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.csproj.AssemblyReference.cache
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.AssemblyInfoInputs.cache
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.AssemblyInfo.cs
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.csproj.CoreCompileInputs.cache
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.csproj.CopyComplete
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.dll
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\refint\ShippingSystem.Service.dll
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ShippingSystem.Service.pdb
+D:\0.App\ProjectsApi\Shipment\ShippingSystem\ShippingSystem.Service\obj\Debug\net7.0\ref\ShippingSystem.Service.dll

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\6531d604-18e9-467e-8269-31bc1995fe86.jpg",
+      "PackagePath": "staticwebassets\\ClientImages\\6531d604-18e9-467e-8269-31bc1995fe86.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ShippingSystemApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ShippingSystemApi.props",
+      "PackagePath": "build\\ShippingSystemApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ShippingSystemApi.props",
+      "PackagePath": "buildMultiTargeting\\ShippingSystemApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ShippingSystemApi.props",
+      "PackagePath": "buildTransitive\\ShippingSystemApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
