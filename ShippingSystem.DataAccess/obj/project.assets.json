@@ -1736,8 +1736,7 @@
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "MailKit": "4.3.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.14",
-          "ShippingSystem.Model": "1.0.0"
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.14"
         },
         "compile": {
           "bin/placeholder/ShippingSystem.Service.dll": {}

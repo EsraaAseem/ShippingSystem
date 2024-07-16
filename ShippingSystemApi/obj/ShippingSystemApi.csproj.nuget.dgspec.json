@@ -4,6 +4,98 @@
     "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\ShippingSystemApi.csproj": {}
   },
   "projects": {
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj",
+        "projectName": "ShippingSystem.Application",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.3.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.DataAccess\\ShippingSystem.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -93,6 +185,143 @@
         }
       }
     },
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj",
+        "projectName": "ShippingSystem.Domain",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\ShippingSystem.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\ShippingSystem.Infrastructure.csproj",
+        "projectName": "ShippingSystem.Infrastructure",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\ShippingSystem.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Model\\ShippingSystem.Model.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -166,6 +395,161 @@
         }
       }
     },
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\ShippingSystem.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\ShippingSystem.Presentation.csproj",
+        "projectName": "ShippingSystem.Presentation",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\ShippingSystem.Presentation.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\ShippingSystem.Presistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\ShippingSystem.Presistance.csproj",
+        "projectName": "ShippingSystem.Presistance",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\ShippingSystem.Presistance.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "EFCore.BulkExtensions": {
+              "target": "Package",
+              "version": "[7.8.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Service\\ShippingSystem.Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -189,11 +573,7 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {
-              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Model\\ShippingSystem.Model.csproj": {
-                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Model\\ShippingSystem.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -223,6 +603,65 @@
               "version": "[7.0.14, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj",
+        "projectName": "ShippingSystem.Shared",
+        "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj",
+        "packagesPath": "C:\\Users\\CS\\.nuget\\packages\\",
+        "outputPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\CS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Domain\\ShippingSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
@@ -329,11 +768,26 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Application\\ShippingSystem.Application.csproj"
+              },
               "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.DataAccess\\ShippingSystem.DataAccess.csproj": {
                 "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.DataAccess\\ShippingSystem.DataAccess.csproj"
               },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\ShippingSystem.Infrastructure.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Infrastructure\\ShippingSystem.Infrastructure.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\ShippingSystem.Presentation.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presentation\\ShippingSystem.Presentation.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\ShippingSystem.Presistance.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Presistance\\ShippingSystem.Presistance.csproj"
+              },
               "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Service\\ShippingSystem.Service.csproj": {
                 "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Service\\ShippingSystem.Service.csproj"
+              },
+              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj": {
+                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Shared\\ShippingSystem.Shared.csproj"
               }
             }
           }
@@ -348,49 +802,21 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[7.0.14, )"
-            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.20, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.10, )"
+              "version": "[7.0.20, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",

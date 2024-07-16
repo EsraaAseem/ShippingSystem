@@ -189,11 +189,7 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {
-              "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Model\\ShippingSystem.Model.csproj": {
-                "projectPath": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystem.Model\\ShippingSystem.Model.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

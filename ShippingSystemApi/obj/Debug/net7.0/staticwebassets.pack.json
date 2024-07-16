@@ -1,6 +1,26 @@
 {
   "Files": [
     {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\0c8244f5-51ba-4119-a2e9-7b30ad7dcb0b.jpg",
+      "PackagePath": "staticwebassets\\ClientImages\\0c8244f5-51ba-4119-a2e9-7b30ad7dcb0b.jpg"
+    },
+    {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\1b0c2a9f-2d2f-4ee3-9e4c-b1534aa32196.png",
+      "PackagePath": "staticwebassets\\ClientImages\\1b0c2a9f-2d2f-4ee3-9e4c-b1534aa32196.png"
+    },
+    {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\1bf6165c-291b-4fa3-959f-7ca7be8480df.jpg",
+      "PackagePath": "staticwebassets\\ClientImages\\1bf6165c-291b-4fa3-959f-7ca7be8480df.jpg"
+    },
+    {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\5394f6ae-41a2-4765-b262-5679d3394655.png",
+      "PackagePath": "staticwebassets\\ClientImages\\5394f6ae-41a2-4765-b262-5679d3394655.png"
+    },
+    {
+      "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\59706d6c-bc3b-4dcb-9bd8-6e6f317db674.jpg",
+      "PackagePath": "staticwebassets\\ClientImages\\59706d6c-bc3b-4dcb-9bd8-6e6f317db674.jpg"
+    },
+    {
       "Id": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\6531d604-18e9-467e-8269-31bc1995fe86.jpg",
       "PackagePath": "staticwebassets\\ClientImages\\6531d604-18e9-467e-8269-31bc1995fe86.jpg"
     },
