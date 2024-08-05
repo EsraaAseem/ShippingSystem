@@ -32,9 +32,23 @@ namespace ShippingSystem.Domain.Models
         public Guid? VehicleId { get; private set; }
         public Vehicle Vehicle { get; private set; }
         public static Beackup CreateBeackup(Guid id, DateTime? startDeliveryTime, DateTime endDeliveryTime,
-            int orderNumber, Beackupstatus status, string clientId, string representativeId, Guid vehicleId)
+            int orderNumber, Beackupstatus status, string clientId, string representativeId, Guid? vehicleId)
         {
             return new Beackup(id,startDeliveryTime,endDeliveryTime,orderNumber,status,clientId, representativeId,vehicleId);
+        }
+        public  void UpdateBeackup(DateTime? startDeliveryTime, DateTime endDeliveryTime,
+            int orderNumber, Beackupstatus status, string representativeId, Guid vehicleId)
+        {
+            StartDeliveryTime = startDeliveryTime;
+            EndDeliveryTime = endDeliveryTime;
+            OrderNumber = orderNumber;
+            Status = status;
+            RepresentativeId = representativeId;
+            VehicleId = vehicleId;
+        }
+        public void UpdateBeackupStatus(Beackupstatus status)
+        {
+            Status = status;
         }
     }
 }

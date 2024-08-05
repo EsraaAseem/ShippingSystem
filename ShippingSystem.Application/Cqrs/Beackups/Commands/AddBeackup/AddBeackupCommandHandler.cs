@@ -12,8 +12,8 @@ namespace ShippingSystem.Application.Cqrs.Beackups.Commands.AddBeackup
     internal class AddBeackupCommandHandler : ICommandHandler<AddBeackupCommand, BaseResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IStringLocalizer<AddVehicleCommandHandler> _localization;
-        public AddBeackupCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddVehicleCommandHandler> localization)
+        private readonly IStringLocalizer<AddBeackupCommandHandler> _localization;
+        public AddBeackupCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddBeackupCommandHandler> localization)
         {
             _unitOfWork = unitOfWork;
             _localization = localization;

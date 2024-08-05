@@ -1,20 +1,17 @@
-﻿using ShippingSystem.Domain.Helper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShippingSystem.Domain.Enums;
+using ShippingSystem.Domain.Helper;
+
 
 namespace ShippingSystem.Domain.Models
 {
     public class ShipmentStatus : Entity
     {
-        public ShipmentStatus(Guid id,string shipmentStatusName,string shipmentStatusDescription) : base(id)
+        public ShipmentStatus(Guid id,ShipmentStatuses shipmentStatusName,string shipmentStatusDescription) : base(id)
         {
             ShipmentStatusName = shipmentStatusName;
             ShipmentStatusDescription = shipmentStatusDescription;
         }
-        public string ShipmentStatusName { get; private set; }
+        public ShipmentStatuses ShipmentStatusName { get; private set; } = ShipmentStatuses.UnConfirmed;
         public string ?ShipmentStatusDescription { get;private set; }
     }
 }

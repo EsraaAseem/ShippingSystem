@@ -10,5 +10,6 @@ namespace ShippingSystem.Domain.IRepositories
     public interface ICityRepository:IRepository<City>
     {
         bool CheckCity(string govern, string city);
+        Task<City> GetCityAsync(string cityName);
     }
 }

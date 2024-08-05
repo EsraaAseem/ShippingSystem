@@ -7,10 +7,8 @@ namespace ShippingSystem.Presistance.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly UserManager<AppUser> _userManager;
-        public AuthService(UserManager<AppUser> userManager )
+        public AuthService( )
         {
-            _userManager = userManager;
         }
 
         

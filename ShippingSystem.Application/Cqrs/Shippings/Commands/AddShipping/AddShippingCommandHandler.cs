@@ -1,14 +1,8 @@
 ﻿using Microsoft.Extensions.Localization;
 using ShippingSystem.Application.Abstractions;
-using ShippingSystem.Application.Cqrs.Vehicles.Commands.AddVehicle;
 using ShippingSystem.Domain.IRepositories;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShippingSystem.Application.Cqrs.Shippings.Commands.AddShipping
 {
@@ -29,7 +23,7 @@ namespace ShippingSystem.Application.Cqrs.Shippings.Commands.AddShipping
             await _unitOfWork.ShippingRepository.Add(shipping);
          //   await _unitOfWork.SaveChangesAsync();
 
-            var shipments = _unitOfWork.ShipmentRepository.AddShipmentShippingId(id,request.shipmentsIds);
+            var shipments = _unitOfWork.ShipmentRepository.AddShipmentShippingId(request.shipmentsIds);
             foreach ( var shipment in shipments.Result )
             {
                 shipment.ShippingId = id;

@@ -5,8 +5,10 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using ShippingSystem.Application.Abstractions.Interfaces;
+using ShippingSystem.Application.Abstractions.Interfaces.IServices;
 using ShippingSystem.Infrastructure.Services.AuthService;
 using ShippingSystem.Infrastructure.Services.BarCode;
+using ShippingSystem.Infrastructure.Services.EmailServices;
 using ShippingSystem.Infrastructure.Services.MediaService;
 using System.Globalization;
 using Wasla.Services.HlepServices.MultLanguageService.JsonLocalizer;
@@ -20,7 +22,9 @@ namespace ShippingSystem.Infrastructure.ExtensionService
             services.AddLocalization()
                 .AddScoped<IMediaService, MediaService>()
             .AddScoped<IJwtService, JwtService>()
+            .AddScoped<IMailServices, MailServices>()
             .AddScoped<IQrCode, QrCodes>();
+
             return services;
         }
         private static IServiceCollection AddLocalization(this IServiceCollection services)

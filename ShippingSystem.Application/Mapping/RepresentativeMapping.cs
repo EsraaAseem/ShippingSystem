@@ -1,11 +1,8 @@
 ﻿using Mapster;
+using ShippingSystem.Application.Cqrs.Representatives.Response;
 using ShippingSystem.Application.Cqrs.ShareResponse.AuthResponse;
 using ShippingSystem.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ShippingSystem.Application.Mapping
 {
@@ -19,6 +16,7 @@ namespace ShippingSystem.Application.Mapping
                                                 .Map(dest => dest.ConnectionData.EmailConfirmed, src => src.EmailConfirmed)
                 .Map(dest => dest.ConnectionData.PhoneConfirmed, src => src.PhoneNumberConfirmed);
             ;
+            config.NewConfig<Representative, RepresentativeResponse>();
         }
     }
 }

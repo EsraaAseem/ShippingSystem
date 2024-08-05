@@ -6,8 +6,11 @@ namespace ShippingSystem.Domain.Enums
     {
         UnConfirmed,
         Confirmed,
-        Returned,
         NotifyedRepresentative,
-        DelegatedRepresentative
+        DelegatedRepresentative,
+        Returned,
+        ReturnedWithPaid,
+        RecivedPartial,
+        Compelete
     }
 }

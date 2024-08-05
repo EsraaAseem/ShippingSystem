@@ -1,5 +1,64 @@
 {
   "EmailOrUserNameExist": "هذا الايميل او اسم الدخول موجود مسبقا",
   "AddClientRequestDescription": "طلب اضافه عميل جديد",
-  "AddClientRequestTitle": "عميل جديد"
+  "AddClientRequestTitle": "عميل جديد",
+  "OtpisCorrect":"الرقم تم ارساله بنجاح",
+  "NotFoundUser":"المستخدم غير موجود",
+  "ConfirmEmailSuccess":"تم تاكيد الايميل بنجاح",
+  "ForgetPasswordFaild":"فشل في تغير كلمه المرور",
+  "ResetPasswordSuccess":"تم تغير كلمه المرور بنجاح",
+  "ErrorOnChangePassword":"فشل في تغير كلمه المرور",
+  "CreateRequestClientSuccess":"تم الطلب بنجاح",
+  "AddEmployeeSuccess":"تم اضافه موظف بنجاح",
+  "ErrorInAddRole":"خطا في اضافه المكانه",
+  "ErrorOnAddUser":"خطا في اضافه المستخدم",
+  "userNameExist":"اسم الدخول موجود مسبقا",
+  "phoneNumberExist":"رقم الهاتف موجود مستخدما",
+  "phoneOremailRequired":"يجب ادخال الايميل او رقم الهاتف",
+  "NotFoundEmail":"الايميل غير موجود",
+  "NotFoundPhone":"الهاتف غير موجود",
+  "WrongPassword":"كلمه المرور غير صحيحه",
+  //Beackup
+  "UpdateBeackupSuccess":"تم تحديث الطلب بنجاح",
+  "NotFoundBeackup":"الطلب غير موجود",
+  "AddBeackupsuccess":"تم اضافه الطلب بنجاح",
+  //city
+  "UpdateCitySuccess":"تم تحديث المدينه بنجاح",
+  "NotFoundCity":"المدينه غير موجوده",
+  "CreateCitySuccess":"تم اضافه المدينه بنجاح",
+  "CityAlreadyExist":"المدينه موجوده مسبقا",
+  //client
+  "RequiredEmailAndUserName":"الايميل و اسم دخول مطلوب ",
+  "UpdateClientSuccess":"تم تحديث معلومات العميل بنجاح",
+  //Employee
+  "clientNotFound":"العميل غير موجود ",
+  "NotFoundEmployee":"الموظف غير موجود",
+  "UpdateEmployeeSuccess":"تم تحديث معلومات الموظف بنجاح",
+  "SuccessFeesPaidUpdate":"تم التحديث بنجاح",
+  //Govern
+  "UpdateGovernSuccess":"تم تحديث المحافظه بنجاح",
+  "NotFoundGovern":"المحافظه غير موجوده",
+  "CreateGovernorateSuccess":"تم انشاء المحافظه بنجاح",
+  "GovernorateAlreadyExist":"المحافظه موجوده مسبقا",
+  //invoice
+  "CreateInvoiceSuccess":"تم انشاء الفاتوره بنجاح",
+  //representative
+  "UpdateRepresentativeSuccess":"تم تعديل معلومات المندوب بنجاح",
+  "RequiredEmailorPhoneAndUserName":"الايميل او الهاتف و اسم الدخول مطلوب",
+  "NotFoundRepresentative":"المندوب غير موجود",
+  //Shipment
+  "UpdateShipmentSuccess":"تم تحديث الشحنه بنجاح",
+  "ProductAlreadyExist":"المنتج موجود مسبقا",
+  "CreateShipmentSuccess":"تم انشاء الشحنه بنجاح",
+  "NotFoundShipment":"الشحنه غير موجوده",
+  //Shiping
+  "NotFoundShip":"غير موجوده",
+  "UpdateShippingSuccess":"تم تحديث عمليه التوصيل بنجاح",
+  "AddShippingSuccess": "تم اضافه عمليه الشحن بنجاح",
+  //Vehicle
+  "CreateVehicleSuccess":"تم اضافه وسيله النقل بنجاح",
+  "vehicleAlreadyExist":"وسيله النقل موجوده مسبقا"
+
+
+
 }

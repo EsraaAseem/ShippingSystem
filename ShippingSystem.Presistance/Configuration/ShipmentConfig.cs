@@ -19,7 +19,6 @@ namespace ShippingSystem.Presistance.Configuration
             builder.HasOne(b => b.ShipmentType).WithMany().HasForeignKey(b => b.ShipmentTypeId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(b => b.Shipping).WithMany().HasForeignKey(b => b.ShippingId).OnDelete(DeleteBehavior.Restrict);
             builder.HasOne(b => b.Client).WithMany().HasForeignKey(b => b.ClientId).OnDelete(DeleteBehavior.Restrict);
-
             builder.OwnsMany(r => r.Products);
             builder.OwnsOne(r => r.Reciver);
 

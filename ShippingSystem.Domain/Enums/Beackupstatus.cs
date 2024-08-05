@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace ShippingSystem.Domain.Enums
 {
@@ -10,6 +6,10 @@ namespace ShippingSystem.Domain.Enums
     {
         Canceled = 0,
         Approved = 1,
-        Unconfirmed=3,
+        Confirmed=2,
+        RepresentativeTelled=3,
+        RepresentativeConfirmed=4,
+        Unconfirmed=5,
+        Shipping=6,
     }
 }

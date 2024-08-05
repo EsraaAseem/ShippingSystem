@@ -44,5 +44,12 @@ namespace ShippingSystem.Infrastructure.Services.MediaService
                 File.Delete(filePath);
             }
         }
+        public async Task<string> UpdateImageAsync(string? oldImg,IFormFile file, string folderName)
+        {
+            if (oldImg is not null)
+                DeleteImage(oldImg);
+           var img= await UploadImageAsync(file, folderName);
+            return img;
+        }
     }
 }

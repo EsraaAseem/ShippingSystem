@@ -29,10 +29,26 @@ namespace ShippingSystem.Domain.Models
         public string? BranchName { get; private set; }
 
         public static Representative CreateRepresentative(string firstName, string lastName, string? governorate,
-            string? branchName, string? phoneNumber, string? email, string userName,string city,string address)
+            string? branchName, string? phoneNumber, string? email, string userName,string city,
+            string address)
         {
             var represent=new Representative(firstName, lastName, governorate, branchName, phoneNumber, email, userName,city,address);
             return represent;
+        }
+        public void UpdateRepresentative(string firstName, string lastName, string? governorate,
+            string? branchName, string? phoneNumber, string? email, string userName, string city,
+            string address)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Governorate = governorate;
+            BranchName = branchName;
+            PhoneNumber = phoneNumber;
+            Email = email;
+            UserName = userName;
+            City = city;
+            Address = address;
+
         }
     }
 }

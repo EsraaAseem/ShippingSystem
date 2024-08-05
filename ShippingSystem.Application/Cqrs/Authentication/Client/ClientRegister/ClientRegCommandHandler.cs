@@ -6,6 +6,7 @@ using ShippingSystem.Domain.IRepositories;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Shared;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using static System.Net.WebRequestMethods;
 
 
 namespace ShippingSystem.Application.Cqrs.Authentication.Client.ClientRegister
@@ -15,11 +16,14 @@ namespace ShippingSystem.Application.Cqrs.Authentication.Client.ClientRegister
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMediaService _mediaService;
         private readonly IStringLocalizer<ClientRegCommandHandler> _localization;
-        public ClientRegCommandHandler(IUnitOfWork unitOfWork, IMediaService mediaService, IStringLocalizer<ClientRegCommandHandler> localization)
+        private readonly IMailServices _mailServices;
+        public ClientRegCommandHandler(IUnitOfWork unitOfWork, IMediaService mediaService, 
+            IStringLocalizer<ClientRegCommandHandler> localization,IMailServices mailServices)
         {
             _unitOfWork = unitOfWork;
             _mediaService = mediaService;
             _localization = localization;
+            _mailServices = mailServices;
         }
 
         public async Task<BaseResponse> Handle(ClientRegCommand command, CancellationToken cancellationToken)
@@ -37,6 +41,14 @@ namespace ShippingSystem.Application.Cqrs.Authentication.Client.ClientRegister
                 _localization["AddClientRequestTitle"].Value,
                  _localization["AddClientRequestDescription"].Value.Replace("Name", $"{clientRequest.Name}"),
                 NotificationType.AddClientRequest,false, DateTime.UtcNow);
+            if (_mailServices != null)
+            {
+
+                await _mailServices.SendEmailAsync(
+                                mailTo: clientRequest.Email,
+                subject: "Client Request",
+                                body: "Your Sign Up Request Will Confirmed ");
+            }
             return await BaseResponse.SuccessResponseWithMessageAsync(_localization["CreateRequestClientSuccess"].Value);
         }
     }

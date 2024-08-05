@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShippingSystem.Application.Abstractions;
+using ShippingSystem.Shared;
+
 
 namespace ShippingSystem.Application.Cqrs.CompanyEmployee.Commands.UpdateEmployeeProfile
 {
-    internal class UpdateEmployeeProfileCommand
-    {
-    }
+    public record UpdateEmployeeProfileCommand(string employeeId, string? email, string userName,
+        string firstName,
+        string lastName,
+        string? phoneNumber,
+        string address,
+        string Covernorate,
+        string city,
+        string branch) :ICommand<BaseResponse>;
 }

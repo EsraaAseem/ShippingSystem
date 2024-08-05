@@ -12,7 +12,12 @@ namespace ShippingSystem.Domain.IRepositories
         IShipmentRepository ShipmentRepository { get; }
         IShippingRepository ShippingRepository { get;}
         IShipmentStatusRepository ShipmentStatusRepository { get; }
-
+        IInvoiceRepository InvoiceRepository { get; }
+        IInvoiceItemsRepository InvoiceItemsRepository { get; }
+        IDeliveryFeesRepository DeliveryFeesRepository { get; }
+        IClientRepository ClientRepository { get; }
+        IEmployeeRepository EmployeeRepository { get; }
+        IRepresentativeRepository RepresentativeRepository { get; }
         Task SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

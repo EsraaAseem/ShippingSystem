@@ -26,6 +26,20 @@ namespace ShippingSystem.Domain.Models
             var employee=new Employee(firstName, lastName, branchName, phoneNumber, email, userName, city, address);
             return employee;
         }
+        public void UpdateEmployee(string firstName, string lastName,
+            string? branchName, string? phoneNumber, string? email, string userName, string city, string address)
+        {
+            Email = email;
+            UserName = userName;
+            FirstName = firstName;
+            LastName = lastName;
+            NormalizedUserName = userName.ToUpper();
+            NormalizedEmail = email.ToUpper();
+            PhoneNumber = phoneNumber;
+            Address = address;
+            City = city;
+            BranchName = branchName;
+        }
 
     }
 }

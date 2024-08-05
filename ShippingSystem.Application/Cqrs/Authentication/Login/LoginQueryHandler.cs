@@ -57,7 +57,7 @@ namespace ShippingSystem.Application.Cqrs.Authentication.Login
             {
                 user = await _userManager.FindByNameAsync(request.useName);
                 if (user == null)
-                    return await BaseResponse.NotFoundResponsAsync(_localization["NotFoundUserName"].Value);
+                    return await BaseResponse.NotFoundResponsAsync(_localization["NotFoundUser"].Value);
             }
             if (!await _userManager.CheckPasswordAsync(user, request.password))
             {

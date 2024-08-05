@@ -1,5 +1,65 @@
 {
   "EmailOrUserNameExist": "this Email or UserName Already Exist",
   "AddClientRequestDescription": "New Client Add Request",
-  "AddClientRequestTitle": "Client Request"
+  "AddClientRequestTitle": "Client Request",
+  "OtpisCorrect": "the otp is correct",
+  "NotFoundUser": "the User Not Found",
+  "ConfirmEmailSuccess": "Email COnfirmed Success",
+  "ResetPasswordSuccess": "the Password Reset Success",
+  "ForgetPasswordFaild": "the reset passord Faild",
+  "ErrorOnChangePassword": "error in change password",
+  "CreateRequestClientSuccess": "Create requestClient Succes",
+  "AddEmployeeSuccess": "Add Employee Success",
+  "ErrorInAddRole": "Error in Add Role",
+  "ErrorOnAddUser": "Error on Add User",
+  "userNameExist": "User Name Already Exist",
+  "EmailExist": "Email Already Exist",
+  "phoneNumberExist": "Phone Already Exist",
+  "phoneOremailRequired": "The Email Or Phone Required",
+  "NotFoundEmail": "Not Found Email",
+  "NotFoundPhone": "Not Found Phone Number",
+  "WrongPassword": "Worng Password",
+
+  //Beackup
+
+  "UpdateBeackupSuccess": "Update Beackup Success",
+  "NotFoundBeackup": "Not Found Beackup",
+  "AddBeackupsuccess": "Add Beackup Success",
+  //City
+  "UpdateCitySuccess": "Update City Success",
+  "NotFoundCity": "Not Found City",
+  "CreateCitySuccess": "Create City Success",
+  "CityAlreadyExist": "City Alread Exist",
+  //Client
+  "RequiredEmailAndUserName": "Email And User Name Required",
+  "UpdateClientSuccess": "Client Updated Success",
+  //employee
+  "clientNotFound": "Client Not Found",
+  "NotFoundEmployee": "Employee Not Found",
+  "UpdateEmployeeSuccess": "Employee Updated Success",
+  "SuccessFeesPaidUpdate": "Update Fees Paid Success",
+  //Govern
+  "UpdateGovernSuccess": "Update Govern Success",
+  "NotFoundGovern": "Governorate Not Found",
+  "CreateGovernorateSuccess": "Create Governorate Success",
+  "GovernorateAlreadyExist": "Governorate Already Exist ",
+  //invoice
+  "CreateInvoiceSuccess": "Create Invoice Success",
+  //Representative
+  "UpdateRepresentativeSuccess": "Update Representative Success",
+  "RequiredEmailorPhoneAndUserName": "Required Email or Phone And UserName",
+  "NotFoundRepresentative": "Not Found Representative",
+  //Shipment
+  "UpdateShipmentSuccess": "Update Shipment Success",
+  "ProductAlreadyExist": "Product Already Exist",
+  "CreateShipmentSuccess": "Create Shipment Success",
+  "NotFoundShipment": "Not Found Shipment",
+  //Shipping
+  "NotFoundShip": "Shipping Not Found",
+  "UpdateShippingSuccess": "Update Shipping Success",
+  "AddShippingSuccess": "Add Shipping Success",
+  //Vehicles
+  "CreateVehicleSuccess":"Create Vehicle Success",
+  "vehicleAlreadyExist":"Vehicle Already Exist"
+
 }

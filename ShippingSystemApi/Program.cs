@@ -7,6 +7,7 @@ using ShippingSystem.Application.ExtensionService;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Domain.Share;
 using ShippingSystem.Infrastructure.ExtensionService;
+using ShippingSystem.Presentation.MiddleWare;
 using ShippingSystem.Presistance.Data;
 using ShippingSystem.Presistance.ExtensionService;
 using ShippingSystemApi.migratserv;
@@ -94,7 +95,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseRouting();
 app.UseAuthorization();
-
+app.AddGlobalExceptionGlobalHandler();
 app.MapControllers();
 var supportedCultures = new[] { "en-US", "ar-EG" };
 var localizationOptions = new RequestLocalizationOptions()

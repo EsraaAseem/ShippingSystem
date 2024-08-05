@@ -12,8 +12,8 @@ namespace ShippingSystem.Application.Cqrs.Cities.Commands.AddCity
     internal class AddCityCommandHandler : ICommandHandler<AddCityCommand, BaseResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IStringLocalizer<AddVehicleCommandHandler> _localization;
-        public AddCityCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddVehicleCommandHandler> localization)
+        private readonly IStringLocalizer<AddCityCommandHandler> _localization;
+        public AddCityCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddCityCommandHandler> localization)
         {
             _unitOfWork = unitOfWork;
             _localization = localization;

@@ -1,11 +1,7 @@
-﻿using ShippingSystem.Domain.IRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using ShippingSystem.Domain.IRepositories;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Presistance.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShippingSystem.Presistance.Repostiories
 {
@@ -15,6 +11,11 @@ namespace ShippingSystem.Presistance.Repostiories
         public BeackupRepository(ShippingSystemContext context) : base(context)
         {
             _context = context;
+        }
+
+        public async Task<Beackup?> GetBeackupAsync(Guid id)
+        {
+            return await _context.Beackups.FirstOrDefaultAsync(b => b.Id == id);
         }
     }
 }

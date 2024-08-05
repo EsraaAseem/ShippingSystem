@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ShippingSystem.Domain.IRepositories
 {
     public interface IClientRepository:IRepository<Client>
-    {
-
+    { 
+       Task< Client> GetClientAsync(string clientId);
     }
 }

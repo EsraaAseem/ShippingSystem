@@ -37,6 +37,14 @@ namespace ShippingSystem.Domain.Models
         {
             return new Shipping(id,representativeId,vehicleId,startDate,locationFrom,locationTo);
         }
+        public void UpdateShippingStatus()
+        {
+            IsShipped = true;
+        }
+        public void UpdateShippingLocation( string currentLocation )
+        {
+            CurrentLocation = currentLocation;
+        }
 
     }
 }

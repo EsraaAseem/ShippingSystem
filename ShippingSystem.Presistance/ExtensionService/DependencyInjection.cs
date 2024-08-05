@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ShippingSystem.Application.Abstractions.Interfaces;
+using ShippingSystem.Application.Abstractions.Interfaces.IServices;
 using ShippingSystem.Domain.IRepositories;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Presistance.Data;
@@ -18,7 +19,17 @@ namespace ShippingSystem.Presistance.ExtensionService
         {
             services.AddChatContext(configuration)
                     .AddScoped<IUnitOfWork, UnitOfWork>()
-                    .AddScoped<IAuthService, AuthService>();
+                    .AddScoped<IAuthService, AuthService>()
+                    .AddScoped<IShipmentServiceQuery, ShipmentServiceQuery>()
+                    .AddScoped<IGovernorateServiceQuery, GovernorateServiceQuery>()
+                    .AddScoped<IClientServiceQuery, ClientServiceQuery>()
+                    .AddScoped<IVehicleServiceQuery, VehicleServiceQuery>()
+                    .AddScoped<ICityQueryService, CityServiceQuery>()
+                    .AddScoped<IEmployeeServiceQuery, EmployeeServiceQuery>()
+                    .AddScoped<IInvoiceServiceQuery, InoiceServiceQuery>()
+                    .AddScoped<IRepresentativeServiceQuery, RepresentativeServiceQuery>()
+                    .AddScoped<IBeackupServiceQuery, BeackupServiceQuery>()
+                    .AddScoped<IShippingServiceQuery, ShippingServiceQuery>();
 
             return services;
         }

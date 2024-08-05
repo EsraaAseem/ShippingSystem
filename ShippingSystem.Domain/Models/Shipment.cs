@@ -1,29 +1,12 @@
 ﻿
-using Microsoft.EntityFrameworkCore;
 using ShippingSystem.Domain.Enums;
 using ShippingSystem.Domain.Helper;
-using System.Text.Json.Serialization;
 
 namespace ShippingSystem.Domain.Models
 {
-    public class Shipment:AggregateRoot
+    public class Shipment : AggregateRoot
     {
         private readonly List<Product> _products = new();
-
-       /* public Shipment(Guid id, List<Product> products, string trackingNumber, Guid? backupId, Guid cityId,
-            Reciver reciver,int shipmentTypeId, DateTime? movedDate, int shipmentStatusId,PaymentStatus paymentStatus) : base(id)
-        {
-            _products = products;
-            TrackingNumber = trackingNumber;
-            BackupId = backupId;
-            CityId = cityId;
-            Reciver = reciver;
-            ShipmentTypeId = shipmentTypeId;
-            MovedDate = movedDate;
-            ShipmentStatusId = shipmentStatusId;
-            PaymentStatus = paymentStatus;
-        }
-        */
         public Shipment(Guid id) : base(id)
         {
         }
@@ -46,21 +29,32 @@ namespace ShippingSystem.Domain.Models
         public Guid? ShippingId { get; set; }
         public Shipping? Shipping { get; set; }
         public PaymentStatus PaymentStatus { get; set; } = PaymentStatus.Pending;
-        public GeneralShipmentStatus GeneralStatus { get; private set; } = GeneralShipmentStatus.Unknown;
-        public double TotalRealPrice { get;private set; }
+        public GeneralShipmentStatus GeneralStatus { get; private set; }
+        public double TotalRealPrice { get; private set; }
         public string? QrCodeUrl { get; private set; }
-        public double TotalProductsWight => Products.Sum(product => product.TotalWeight);
-        public double TotalProductsPrice => Products.Sum(product => product.TotalPrice);
+        public double TotalProductsWight => Products.Sum(product => product.TotalRecivedWeight);
+        public double TotalProductsPrice => Products.Sum(product => product.TotalRecivedPrice);
         public double TotalPrice => TotalProductsPrice + ShippingPrice();
-        public double NetAccount => PaymentStatus == PaymentStatus.Pending ? TotalProductsPrice - ShippingPrice() : - ShippingPrice();
+        public double NetAccount()
+        {
+            if ((PaymentStatus == PaymentStatus.Pending && (ShippmentStatus.ShipmentStatusName != ShipmentStatuses.Returned ||
+                ShippmentStatus.ShipmentStatusName != ShipmentStatuses.ReturnedWithPaid) && Shipping.IsShipped) 
+                ||(PaymentStatus == PaymentStatus.Pending&&Shipping.IsShipped==false))
+                return TotalProductsPrice - ShippingPrice();
+            else if (ShippmentStatus.ShipmentStatusName == ShipmentStatuses.ReturnedWithPaid)
+                return 0;
+            else
+                return - ShippingPrice();
+
+        }// PaymentStatus == PaymentStatus.Pending ? TotalProductsPrice - ShippingPrice() : - ShippingPrice();
         public double ShippingPrice()
         {
             double price = 0;
-            if (ShippmentStatus.ShipmentStatusName == "Returned")
+            if (ShippmentStatus.ShipmentStatusName == ShipmentStatuses.Returned|| ShippmentStatus.ShipmentStatusName != ShipmentStatuses.ReturnedWithPaid)
                 price = City.ReturnShippingCost+ShipmentType.ExtreShippingCost;
-                else price = City.ShippingCost+ShipmentType.ExtreShippingCost;
+            else price = City.ShippingCost+ShipmentType.ExtreShippingCost;
                 if (PaymentStatus == PaymentStatus.Pending)
-                    price += ((TotalProductsWight - 1) * City.ExcessShippingCost);
+                    price += TotalProductsWight>1? ((TotalProductsWight - 1) * City.ExcessShippingCost):0;
 
             return price;
         }
@@ -73,7 +67,7 @@ namespace ShippingSystem.Domain.Models
            }*/
         public static string BarCodeShipment(string trackNumber)
         {
-            return string.Format(" Tracking Number : {0}\n", trackNumber);
+            return string.Format(" Tracking Number : {0} \n", trackNumber);
         }
         public static Shipment CreateShipment(Guid id, List<Product> products, string trackingNumber, Guid? backupId,
        Guid cityId,string? clientId, Reciver reciver, int shipmentTypeId, DateTime? movedDate, 
@@ -92,6 +86,18 @@ namespace ShippingSystem.Domain.Models
             shipment.QrCodeUrl= qrCode;
             shipment._products.AddRange(products);
             return shipment;
+        }
+        public static void AddInvoicedStatus(Shipment shipment)
+        {
+            shipment.GeneralStatus = GeneralShipmentStatus.InvoiceCreated;
+        }
+        public void UpdateShipmentStatus(ShipmentStatus status)
+        {
+            ShippmentStatus = status;
+        }
+        public void FundsSettled()
+        {
+            GeneralStatus = GeneralShipmentStatus.FundsSettled;
         }
     }
 }

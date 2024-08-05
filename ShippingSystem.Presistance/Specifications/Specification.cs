@@ -18,7 +18,5 @@ namespace ShippingSystem.Presistance.Specifications
            OrderByExpression = orderByExpression;
         protected void AddOrderDescendingBy(Expression<Func<TEntity, object>> orderByDescendingExpression) =>
            OrderByDescendingExpression = orderByDescendingExpression;
-
-
     }
 }

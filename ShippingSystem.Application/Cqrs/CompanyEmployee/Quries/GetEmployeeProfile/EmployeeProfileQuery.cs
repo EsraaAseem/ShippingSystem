@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ShippingSystem.Application.Abstractions;
+using ShippingSystem.Shared;
+
 
 namespace ShippingSystem.Application.Cqrs.CompanyEmployee.Quries.GetEmployeeProfile
 {
-    internal class EmployeeProfileQuery
-    {
-    }
+    public record EmployeeProfileQuery(string employeeId):IQuery<BaseResponse>;
 }

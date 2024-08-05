@@ -7,65 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\Interfaces\IServices\" />
-    <Folder Include="Cqrs\AccountManagment\ForgetPassword\" />
-    <Folder Include="Cqrs\AccountManagment\ConfirmEmail\" />
-    <Folder Include="Cqrs\AccountManagment\ConfirmPhone\" />
-    <Folder Include="Cqrs\AccountManagment\ResetPassword\" />
-    <Folder Include="Cqrs\Authentication\Employees\EmployeeLogin\" />
-    <Folder Include="Cqrs\Authentication\Representatives\RepresentativeLogin\" />
-    <Folder Include="Cqrs\Beackups\Queries\" />
-    <Folder Include="Cqrs\Cities\Queries\" />
-    <Folder Include="Cqrs\Clients\Commands\UpdateClientBeackup\" />
-    <Folder Include="Cqrs\Clients\Commands\UpdateClient\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientProfile\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientBackups\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientBackupsRecived\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientBeackupsRequest\" />
-    <Folder Include="Cqrs\Clients\Queries\CLientShipments\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsRequests\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsShipping\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsReturned\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsCompleted\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsRefused\" />
-    <Folder Include="Cqrs\Clients\Queries\ClientShipmentsRefusedWithoutPay\" />
-    <Folder Include="Cqrs\Clients\Queries\indebtes\" />
-    <Folder Include="Cqrs\Clients\Queries\Indebtedness\" />
-    <Folder Include="Cqrs\Clients\Queries\ShipedOrders\" />
-    <Folder Include="Cqrs\Clients\Queries\Notification\" />
-    <Folder Include="Cqrs\Governorates\Commands\UpdateCovernorate\" />
-    <Folder Include="Cqrs\Governorates\Queries\GetGovernorates\" />
-    <Folder Include="Cqrs\Representative\Commands\BeackupStatus\" />
-    <Folder Include="Cqrs\Representative\Commands\ShipmentStatus\" />
-    <Folder Include="Cqrs\Representative\Commands\UpdateRepresentative\" />
-    <Folder Include="Cqrs\Representative\Queries\Indebtedness\" />
-    <Folder Include="Cqrs\Representative\Queries\Indebtes\" />
-    <Folder Include="Cqrs\Representative\Queries\Beackups\" />
-    <Folder Include="Cqrs\Representative\Queries\DeliveriesCost\" />
-    <Folder Include="Cqrs\Representative\Queries\ShippingOrders\" />
-    <Folder Include="Cqrs\Representative\Queries\ShipedOrders\" />
-    <Folder Include="Cqrs\Representative\Queries\Notification\" />
-    <Folder Include="Cqrs\Representative\Queries\Shipments\" />
-    <Folder Include="Cqrs\Representative\Queries\RepresentativeProfile\" />
-    <Folder Include="Cqrs\Shipments\Commands\FundsSettledShipment\" />
-    <Folder Include="Cqrs\Shipments\Commands\UpdateShipmentStatus\" />
-    <Folder Include="Cqrs\Shipments\Commands\UpdateShipment\" />
-    <Folder Include="Cqrs\Shipments\Queries\getRepresentativeShipments\" />
-    <Folder Include="Cqrs\Shipments\Queries\GetShipments\" />
-    <Folder Include="Cqrs\Shipments\Queries\GetClientShippingShipments\" />
-    <Folder Include="Cqrs\Shipments\Queries\GetClientShippedShipment\" />
-    <Folder Include="Cqrs\Shipments\Queries\GetClientReturnedShipments\" />
-    <Folder Include="Cqrs\Shippings\Commands\ShippingIsFinished\" />
-    <Folder Include="Cqrs\Shippings\Commands\UpdateShippingLocation\" />
-    <Folder Include="Cqrs\Shippings\Commands\UpdateShipping\" />
-    <Folder Include="Cqrs\Shippings\Quries\GetSystemShippings\" />
-    <Folder Include="Cqrs\Shippings\Quries\GetClientShippings\" />
-    <Folder Include="Cqrs\Shippings\Quries\ClientShippingIsShip\" />
-    <Folder Include="Cqrs\Vehicles\Commands\UpdateVehicle\" />
-    <Folder Include="Cqrs\Vehicles\Quries\GetVehicles\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.2.2" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />

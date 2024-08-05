@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/h5wH6l2tXVScz2CRsm/Y+0PtQNAl32tfO2bnw9Jbtc=",
+  "Hash": "8xGAkvEUVnA9+xoBxqXTEna/LWtbHSUPC0z0DlrEdEs=",
   "Source": "ShippingSystemApi",
   "BasePath": "_content/ShippingSystemApi",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\ClientImages\\1bf6165c-291b-4fa3-959f-7ca7be8480df.jpg"
+    },
+    {
+      "Identity": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\3d880843-b4ee-4871-aad6-4620dd07460f.jpg",
+      "SourceId": "ShippingSystemApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\",
+      "BasePath": "_content/ShippingSystemApi",
+      "RelativePath": "ClientImages/3d880843-b4ee-4871-aad6-4620dd07460f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ClientImages\\3d880843-b4ee-4871-aad6-4620dd07460f.jpg"
     },
     {
       "Identity": "D:\\0.App\\ProjectsApi\\Shipment\\ShippingSystem\\ShippingSystemApi\\wwwroot\\ClientImages\\5394f6ae-41a2-4765-b262-5679d3394655.png",

@@ -1,4 +1,5 @@
-﻿using ShippingSystem.Domain.IRepositories;
+﻿using Microsoft.EntityFrameworkCore;
+using ShippingSystem.Domain.IRepositories;
 using ShippingSystem.Domain.Models;
 using ShippingSystem.Presistance.Data;
 using System;
@@ -22,6 +23,11 @@ namespace ShippingSystem.Presistance.Repostiories
         {
             return _context.Cities.Any(c => c.GovernorateName.ToLower() == govern.ToLower() &&
                                    c.Name.ToLower() == city.ToLower());
+        }
+
+        public async Task<City ?> GetCityAsync(string cityName)
+        {
+            return await _context.Cities.FirstOrDefaultAsync(b => b.Name == cityName);
         }
     }
 }

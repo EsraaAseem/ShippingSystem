@@ -271,7 +271,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("Beackups", (string)null);
+                    b.ToTable("Beackups");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.City", b =>
@@ -280,19 +280,19 @@ namespace ShippingSystem.Presistance.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<double?>("BeackupDeliveryCost")
+                    b.Property<double>("BeackupDeliveryCost")
                         .HasColumnType("float");
 
-                    b.Property<double?>("CourierBeackupDeliveryCostPercent")
+                    b.Property<double>("CourierBeackupDeliveryCostPercent")
                         .HasColumnType("float");
 
-                    b.Property<double?>("CourierInvoiceDeliveryCostPercent")
+                    b.Property<double>("CourierInvoiceDeliveryCostPercent")
                         .HasColumnType("float");
 
-                    b.Property<double?>("CourierShipmentMoveCost")
+                    b.Property<double>("CourierShipmentMoveCost")
                         .HasColumnType("float");
 
-                    b.Property<double?>("CourierShippingCostPercent")
+                    b.Property<double>("CourierShippingCostPercent")
                         .HasColumnType("float");
 
                     b.Property<double>("ExcessShippingCost")
@@ -302,7 +302,7 @@ namespace ShippingSystem.Presistance.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double?>("InvoiceDeliveryCost")
+                    b.Property<double>("InvoiceDeliveryCost")
                         .HasColumnType("float");
 
                     b.Property<string>("Name")
@@ -317,7 +317,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.ClientAddRequest", b =>
@@ -366,7 +366,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClientRequest", (string)null);
+                    b.ToTable("ClientRequest");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.Governorate", b =>
@@ -381,7 +381,75 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Governorates", (string)null);
+                    b.ToTable("Governorates");
+                });
+
+            modelBuilder.Entity("ShippingSystem.Domain.Models.Invoice", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ClientId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<double>("InvoiceDeliveryCost")
+                        .HasColumnType("float");
+
+                    b.Property<double>("ItemsCost")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.ToTable("Invoices");
+                });
+
+            modelBuilder.Entity("ShippingSystem.Domain.Models.InvoiceItems", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("InvoiceId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("InvoiceId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<double>("NetCost")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ProductsPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ReciverEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReciverName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ShippingPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalCost")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InvoiceId");
+
+                    b.HasIndex("InvoiceId1");
+
+                    b.ToTable("InvoiceItems");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.Shipment", b =>
@@ -451,7 +519,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasIndex("ShippingId1");
 
-                    b.ToTable("Shipments", (string)null);
+                    b.ToTable("Shipments");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.ShipmentStatus", b =>
@@ -463,13 +531,20 @@ namespace ShippingSystem.Presistance.Migrations
                     b.Property<string>("ShipmentStatusDescription")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ShipmentStatusName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ShipmentStatusName")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ShipmentStatuses", (string)null);
+                    b.ToTable("ShipmentStatuses");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("1704f7d4-2929-41a1-92ce-d1129b151ca0"),
+                            ShipmentStatusDescription = "Reciver reject the shipment",
+                            ShipmentStatusName = 0
+                        });
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.ShipmentType", b =>
@@ -492,7 +567,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ShipmentTypes", (string)null);
+                    b.ToTable("ShipmentTypes");
 
                     b.HasData(
                         new
@@ -548,7 +623,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasIndex("VehicleId");
 
-                    b.ToTable("Shippings", (string)null);
+                    b.ToTable("Shippings");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.Vehicle", b =>
@@ -566,7 +641,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vehicles", (string)null);
+                    b.ToTable("Vehicles");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.Client", b =>
@@ -683,7 +758,7 @@ namespace ShippingSystem.Presistance.Migrations
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.AppUser", b =>
                 {
-                    b.OwnsMany("ShippingSystem.Domain.Models.AppUser.RefreshTokens#ShippingSystem.Domain.Models.RefreshToken", "RefreshTokens", b1 =>
+                    b.OwnsMany("ShippingSystem.Domain.Models.RefreshToken", "RefreshTokens", b1 =>
                         {
                             b1.Property<string>("AppUserId")
                                 .HasColumnType("nvarchar(450)");
@@ -742,6 +817,32 @@ namespace ShippingSystem.Presistance.Migrations
                     b.Navigation("Vehicle");
                 });
 
+            modelBuilder.Entity("ShippingSystem.Domain.Models.Invoice", b =>
+                {
+                    b.HasOne("ShippingSystem.Domain.Models.Client", "Client")
+                        .WithMany()
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Client");
+                });
+
+            modelBuilder.Entity("ShippingSystem.Domain.Models.InvoiceItems", b =>
+                {
+                    b.HasOne("ShippingSystem.Domain.Models.Invoice", "Invoice")
+                        .WithMany()
+                        .HasForeignKey("InvoiceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ShippingSystem.Domain.Models.Invoice", null)
+                        .WithMany("Items")
+                        .HasForeignKey("InvoiceId1");
+
+                    b.Navigation("Invoice");
+                });
+
             modelBuilder.Entity("ShippingSystem.Domain.Models.Shipment", b =>
                 {
                     b.HasOne("ShippingSystem.Domain.Models.Beackup", "BackUp")
@@ -782,7 +883,7 @@ namespace ShippingSystem.Presistance.Migrations
                         .WithMany("Shipments")
                         .HasForeignKey("ShippingId1");
 
-                    b.OwnsMany("ShippingSystem.Domain.Models.Shipment.Products#ShippingSystem.Domain.Models.Product", "Products", b1 =>
+                    b.OwnsMany("ShippingSystem.Domain.Models.Product", "Products", b1 =>
                         {
                             b1.Property<Guid>("ShipmentId")
                                 .HasColumnType("uniqueidentifier");
@@ -806,15 +907,18 @@ namespace ShippingSystem.Presistance.Migrations
                             b1.Property<double>("ProductWeight")
                                 .HasColumnType("float");
 
+                            b1.Property<int>("RecivedAmount")
+                                .HasColumnType("int");
+
                             b1.HasKey("ShipmentId", "Id");
 
-                            b1.ToTable("Product", (string)null);
+                            b1.ToTable("Product");
 
                             b1.WithOwner()
                                 .HasForeignKey("ShipmentId");
                         });
 
-                    b.OwnsOne("ShippingSystem.Domain.Models.Shipment.Reciver#ShippingSystem.Domain.Models.Reciver", "Reciver", b1 =>
+                    b.OwnsOne("ShippingSystem.Domain.Models.Reciver", "Reciver", b1 =>
                         {
                             b1.Property<Guid>("ShipmentId")
                                 .HasColumnType("uniqueidentifier");
@@ -841,7 +945,7 @@ namespace ShippingSystem.Presistance.Migrations
 
                             b1.HasKey("ShipmentId");
 
-                            b1.ToTable("Shipments", (string)null);
+                            b1.ToTable("Shipments");
 
                             b1.WithOwner()
                                 .HasForeignKey("ShipmentId");
@@ -909,6 +1013,11 @@ namespace ShippingSystem.Presistance.Migrations
                         .HasForeignKey("ShippingSystem.Domain.Models.Representative", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ShippingSystem.Domain.Models.Invoice", b =>
+                {
+                    b.Navigation("Items");
                 });
 
             modelBuilder.Entity("ShippingSystem.Domain.Models.Shipping", b =>

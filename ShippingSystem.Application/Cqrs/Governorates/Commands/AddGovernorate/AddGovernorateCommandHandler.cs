@@ -10,8 +10,8 @@ namespace ShippingSystem.Application.Cqrs.Governorates.Commands.AddGovernorate
     internal class AddGovernorateCommandHandler:ICommandHandler<AddGovernorateCommand,BaseResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IStringLocalizer<AddVehicleCommandHandler> _localization;
-        public AddGovernorateCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddVehicleCommandHandler> localization)
+        private readonly IStringLocalizer<AddGovernorateCommandHandler> _localization;
+        public AddGovernorateCommandHandler(IUnitOfWork unitOfWork, IStringLocalizer<AddGovernorateCommandHandler> localization)
         {
             _unitOfWork = unitOfWork;
             _localization = localization;

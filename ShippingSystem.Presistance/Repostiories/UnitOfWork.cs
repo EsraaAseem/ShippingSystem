@@ -18,8 +18,12 @@ namespace ShippingSystem.Presistance.Repostiories
             ShipmentRepository = new ShipmentRepository(_context);
             ShippingRepository = new ShippingRepository(_context);
             ShipmentStatusRepository = new ShipmentStatusRepository(_context);
-
-
+            InvoiceRepository=new InvoiceRepository(_context);
+            InvoiceItemsRepository = new InvoiceItemsRepository(_context);
+            DeliveryFeesRepository=new DeliveryFeesRepository(_context);
+            ClientRepository = new ClientRepository(_context);
+            EmployeeRepository = new EmployeeRepository(_context);
+            RepresentativeRepository = new RepresentativeRepository(_context);
         }
 
         public IClientAddRequestRepository ClientAddRequestRepository { get; private set; }
@@ -30,6 +34,13 @@ namespace ShippingSystem.Presistance.Repostiories
         public IShipmentRepository ShipmentRepository { get; private set; }
         public IShippingRepository ShippingRepository { get; private set; }
         public IShipmentStatusRepository ShipmentStatusRepository { get; private set; }
+        public IInvoiceRepository InvoiceRepository { get; private set; }
+        public IInvoiceItemsRepository InvoiceItemsRepository { get; private set; }
+        public IDeliveryFeesRepository DeliveryFeesRepository { get; private set; }
+        public IClientRepository ClientRepository { get; private set; }
+       public IRepresentativeRepository RepresentativeRepository { get; private set; }
+        public IEmployeeRepository EmployeeRepository { get; private set; }
+
 
         public Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {

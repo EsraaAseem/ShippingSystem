@@ -14,5 +14,9 @@ namespace ShippingSystem.Domain.Models
         {
             return new Governorate(id,name);
         }
+        public void UpdateCovernorate(string name)
+        {
+            Name = name;
+        }
     }
 }

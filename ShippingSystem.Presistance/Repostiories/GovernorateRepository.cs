@@ -17,5 +17,10 @@ namespace ShippingSystem.Presistance.Repostiories
         {
             return _context.Governorates.Any(g => g.Name.ToLower() == name.ToLower());
         }
+
+        public async Task<Governorate?> GetGovernorate(Guid id)
+        {
+            return await _context.Governorates.FindAsync(id);
+        }
     }
 }

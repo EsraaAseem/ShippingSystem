@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using ShippingSystem.Domain.Helper;
-using System;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace ShippingSystem.Domain.Models
 {
