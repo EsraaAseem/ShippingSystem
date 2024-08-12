@@ -7,7 +7,8 @@ and manage invoices. Integrated a comprehensive system for shipping companies to
 - **Persistence:**
     - Database: `MS SQL Server`
     - ORM: `Entity Framework Core`
-- **Authorization:** `JWT Bearer`
+- **Authorization:**
+- `JWT Bearer`
 - **Application Logic:**
     - `MediatR`
     - `Fluent Validation`
